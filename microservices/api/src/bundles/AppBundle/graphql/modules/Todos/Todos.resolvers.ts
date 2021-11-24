@@ -8,7 +8,15 @@ export default {
     [],
     {
       TodosFindOne: [X.ToNovaOne(TodosCollection)],
-      TodosFind: [X.ToNova(TodosCollection)],
+      TodosFind: [
+        X.ToNova(TodosCollection, async (_, args, ctx) => {
+          return {
+            filters: {
+              createdById: ctx.userId,
+            },
+          };
+        }),
+      ],
       TodosCount: [X.ToCollectionCount(TodosCollection)],
     },
   ],

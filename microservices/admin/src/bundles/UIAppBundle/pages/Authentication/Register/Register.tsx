@@ -15,6 +15,7 @@ import {
   notification,
 } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
+import { useAppGuardian } from "@bundles/UIAppBundle/services/AppGuardian";
 
 type FormInput = {
   firstName: string;
@@ -24,7 +25,7 @@ type FormInput = {
 };
 
 export function Register() {
-  const guardian = useGuardian();
+  const guardian = useAppGuardian();
   const router = useRouter();
   const tl = useTranslate("authentication.register");
   const [submitError, setSubmitError] = useState(null);

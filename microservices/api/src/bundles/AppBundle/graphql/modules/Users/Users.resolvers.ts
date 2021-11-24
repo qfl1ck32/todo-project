@@ -3,6 +3,10 @@ import { IResolverMap } from "@bluelibs/graphql-bundle";
 import { UserInsertInput, UserUpdateInput } from "../../../services/inputs";
 import { UsersCollection } from "../../../collections/Users/Users.collection";
 
+const MyExecutor = async (root, args, ctx) => {
+  args.document.roles = ["USER"];
+};
+
 export default {
   Query: [
     [],
@@ -18,6 +22,7 @@ export default {
       UsersInsertOne: [
         X.ToModel(UserInsertInput, { field: "document" }),
         X.Validate({ field: "document" }),
+        MyExecutor,
         X.ToDocumentInsert(UsersCollection),
         X.ToNovaByResultID(UsersCollection),
       ],
