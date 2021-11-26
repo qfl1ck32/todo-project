@@ -4,10 +4,10 @@ import { DashboardOutlined } from "@ant-design/icons";
 export const DASHBOARD = {
   path: "/dashboard",
   component: Dashboard,
-  roles:["ADMIN"],
+  // roles:["ADMIN"],
   menu: {
-    key: "Dashboard",
-    label: "Dashboard",
+    key: "DashboardX",
+    label: "DashboardX",
     order: 0,
     icon: DashboardOutlined,
   },

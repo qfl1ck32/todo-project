@@ -21,9 +21,11 @@ type AppUserType = GuardianUserType & {
 type AppRegisterType = GuardianUserRegistrationType;
 
 export class AppGuardian extends GuardianSmart<AppUserType, AppRegisterType> {
-
-  public async registerUser(input:NewUserInfoInput) {
-    await this.apolloClient.mutate({mutation:REGISTER_USER,variables:{input}})
+  public async registerUser(input: NewUserInfoInput) {
+    await this.apolloClient.mutate({
+      mutation: REGISTER_USER,
+      variables: { input },
+    });
   }
 
   protected retrieveUser(): Promise<AppUserType> {

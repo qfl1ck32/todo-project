@@ -1,3 +1,4 @@
+import "./Todo.service.test.ts";
 import "./getUserTodos.service.test.ts";
 import "./NewTodo.service.test.ts";
 import "./UserRegistration.service.test.ts";

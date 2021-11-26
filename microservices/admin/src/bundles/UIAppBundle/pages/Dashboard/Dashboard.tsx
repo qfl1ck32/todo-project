@@ -20,12 +20,12 @@ export function Dashboard() {
       );
     });
   return (
-    <UIComponents.AdminLayout>
+    <UIComponents.Protect>
       <PageHeader title="Dashboard" />
       <Card>
         <Row gutter={[16, 24]}>{cards}</Row>
       </Card>
-    </UIComponents.AdminLayout>
+    </UIComponents.Protect>
   );
 }
 
