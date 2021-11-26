@@ -5,7 +5,7 @@ import { UserRegistrationService } from "../services/UserRegistration.service";
 // Expect: https://jestjs.io/docs/en/expect
 
 describe("UserRegistrationService", () => {
-  test("()", async () => {
+  test("register()", async () => {
     throw new Error("Test not implemented.");
   });
 });

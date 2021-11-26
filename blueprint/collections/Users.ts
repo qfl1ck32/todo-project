@@ -43,7 +43,5 @@ export const Users = collection({
       isReducer: true,
     }),
   ],
-  relations: [...shortcuts.relations.blameable(),
-  
-  ],
+  relations: [...shortcuts.relations.blameable()],
 });
